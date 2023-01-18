@@ -1,0 +1,173 @@
+@import url("satoshi.css");
+
+.container {
+  margin: 0 160px; /* Add 20px of margin to the left and right sides */
+}
+
+.navbar {
+  font-family: "Satoshi-Variable";
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 1rem;
+
+  .navbar-brand {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: center;
+
+    li > a {
+      text-decoration: none;
+      color: #0a0f0d;
+    }
+
+    li > button {
+      background-color: transparent;
+      cursor: pointer;
+      color: #0a0f0d;
+      border: 1px solid #0a0f0d;
+      border-radius: 40px;
+      padding: 0.5rem 1rem;
+      font-family: "Satoshi-Variable";
+    }
+  }
+
+  .hamburger {
+    display: none;
+  }
+}
+
+.hero {
+  font-family: "Satoshi-Variable";
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  padding-top: 2rem;
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: flex-start;
+
+    h1 {
+      margin: 0;
+      font-weight: bold;
+      font-size: 2.5rem;
+    }
+
+    p {
+      margin: 0;
+      font-size: 1.1rem;
+    }
+
+    .hero-btn {
+      font-family: "Satoshi-Variable";
+      font-weight: 500;
+      border-bottom: 1px solid #0a0f0d;
+      padding-bottom: 0.5rem;
+      text-transform: uppercase;
+      font-size: 1.3rem;
+      cursor: pointer;
+      text-decoration: none;
+      color: #0a0f0d;
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+
+      .hero-btn-img {
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+    }
+  }
+
+  .hero-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 394px;
+    height: 394px;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+
+.brands {
+  padding-top: 1.5rem;
+  margin: 3rem 0;
+
+  border-top: 1px solid #0a0f0d;
+  border-bottom: 1px solid #0a0f0d;
+
+  .brands-display {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    img {
+      width: 120px;
+      height: 120px;
+    }
+  }
+
+  .brands-display-title {
+    font-family: "Satoshi-Variable";
+    font-weight: 400;
+    font-size: 1rem;
+    text-align: center;
+    margin: 0;
+  }
+}
+
+// Responsive styles
+@media (max-width: 768px) {
+  .container {
+    margin: 0 50px; /* Add 20px of margin to the left and right sides */
+  }
+
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+
+    .nav-links {
+      display: none;
+    }
+
+    .hamburger {
+      display: flex;
+      cursor: pointer;
+    }
+  }
+
+  .hero {
+    flex-direction: column-reverse;
+    padding-top: 1rem;
+
+    .hero-content {
+      flex: 1;
+      align-items: center;
+      padding: 0 2rem;
+    }
+
+    .hero-img {
+      margin-top: 2rem;
+    }
+  }
+}
