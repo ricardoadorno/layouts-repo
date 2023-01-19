@@ -134,6 +134,356 @@
   }
 }
 
+.showcase {
+  h1 {
+    font-family: "Satoshi-Variable";
+    font-weight: 500;
+    font-size: 2rem;
+    text-align: center;
+    margin: 0;
+    padding-bottom: 3rem;
+  }
+
+  .showcase-cards {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      max-width: 270px;
+      height: 342px;
+      border: 1px solid #0a0f0d;
+      border-radius: 10px;
+
+      h3 {
+        font-family: "Satoshi-Variable";
+        font-weight: 500;
+        font-size: 1.5rem;
+        text-align: start;
+        margin: 0;
+        padding: 0.2rem 1rem;
+      }
+
+      p {
+        font-family: "Satoshi-Variable";
+        font-weight: 400;
+        font-size: 1rem;
+        text-align: start;
+        margin: 0;
+        padding: 1rem;
+      }
+
+      .showcase-card-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 194px;
+        height: 194px;
+
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+    }
+
+    .card-1 {
+      padding-top: 1rem;
+      background-color: #ebffdb;
+    }
+
+    .card-2 {
+      background-color: #d5e9f8;
+      padding-bottom: 1rem;
+    }
+
+    .card-3 {
+      padding-top: 1rem;
+      background-color: #c5b6f0;
+    }
+  }
+}
+
+.reviews-container {
+  margin-top: 2rem;
+  padding: 2rem 0;
+  background-color: #fffba0;
+
+  h1 {
+    font-family: "Satoshi-Variable";
+    font-weight: 500;
+    font-size: 2rem;
+    text-align: center;
+    margin: 0;
+    padding-bottom: 3rem;
+  }
+
+  .card-container {
+    margin: 2rem 160px;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      max-width: 270px;
+      padding: 2rem;
+
+      padding-bottom: 4rem;
+
+      border-radius: 14px;
+      background-color: #ffffff;
+      border: 1px solid #0a0f0d;
+      .stars {
+        display: flex;
+        flex-direction: row;
+        gap: 0.5rem;
+        color: #ffd569;
+      }
+
+      .blockquote {
+        font-family: "Satoshi-Variable";
+        font-weight: 400;
+        font-size: 1rem;
+        text-align: start;
+        margin: 0;
+        padding: 1rem 0;
+        font-style: italic;
+        color: #0a0f0d;
+        opacity: 0.8;
+        line-height: 1.6;
+      }
+
+      .author-content {
+        margin-top: 1rem;
+        width: 100%;
+        position: relative;
+
+        .author-name {
+          font-family: "Satoshi-Variable";
+          font-size: 1rem;
+          text-align: start;
+          margin: 0;
+          text-transform: uppercase;
+          font-weight: 600;
+          padding: 0.3rem 0;
+        }
+
+        .author-title {
+          font-family: "Satoshi-Variable";
+          font-weight: 400;
+          font-size: 0.8rem;
+          text-align: start;
+          color: #0a0f0d;
+          opacity: 0.8;
+        }
+
+        .author-brand {
+          left: 0;
+          position: absolute;
+        }
+
+        .solid {
+          margin-bottom: 1.5rem;
+        }
+
+        .author-img {
+          width: 40px;
+          right: 0;
+          position: absolute;
+        }
+      }
+    }
+  }
+}
+
+.faq-container {
+  margin-bottom: 2rem 0;
+  background-color: #0a0f0d;
+  color: #ffffff;
+
+  h1 {
+    font-family: "Satoshi-Variable";
+    font-weight: 500;
+    font-size: 2rem;
+    text-align: left;
+    margin: 0;
+    padding: 2rem 0;
+  }
+
+  .faq {
+    margin: 0 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .faq-item {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      width: 90%;
+
+      background-color: #1a1a1a;
+      padding: 1rem;
+      margin: 1rem 0;
+      border: 1px solid #ffffff;
+
+      .faq-question {
+        display: flex;
+        flex-direction: row;
+        font-family: "Satoshi-Variable";
+        font-size: 1.2rem;
+        text-align: start;
+
+        h3 {
+          margin: 0;
+          font-weight: 400;
+        }
+
+        i {
+          margin-left: auto;
+          padding: 0.2rem;
+
+          &.active {
+            rotate: 180deg;
+          }
+        }
+      }
+
+      .faq-answer {
+        display: none;
+        p {
+          font-family: "Satoshi-Variable";
+          font-weight: 300;
+          font-size: 1rem;
+          text-align: start;
+          margin-top: 1rem;
+        }
+
+        &.active {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 1fr 1fr;
+
+  .footer-left {
+    .footer-logo {
+      width: 120px;
+      height: 120px;
+    }
+    .input-newsletter {
+      h3 {
+        font-family: "Satoshi-Variable";
+        font-weight: 500;
+        font-size: 1.5rem;
+        text-align: start;
+        margin: 0;
+      }
+
+      .input-newsletter-form {
+        position: absolute;
+
+        input {
+          width: 200px;
+          height: 1.5rem;
+          border: 1px solid #0a0f0d;
+          border-radius: 10px;
+          padding: 0.5rem 1rem;
+          font-family: "Satoshi-Variable";
+          margin-top: 0.5rem;
+        }
+
+        img {
+          width: 1.5rem;
+          height: 1.5rem;
+          cursor: pointer;
+          font-family: "Satoshi-Variable";
+        }
+      }
+    }
+  }
+
+  .footer-links-list {
+    grid-column: 1 / 4;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 1rem;
+
+    .link-list {
+      display: flex;
+      flex-direction: column;
+
+      ul {
+        list-style: none;
+        font-family: "Satoshi-Variable";
+        font-weight: 400;
+        padding-top: 0.8rem;
+
+        h3 {
+          margin: 0;
+          padding-bottom: 0.5rem;
+          text-align: left;
+          font-family: "Satoshi-Variable";
+          font-weight: 600;
+          font-size: 1rem;
+        }
+
+        li {
+          margin-top: 0.4rem;
+
+          a {
+            text-decoration: none;
+            color: #0a0f0d;
+            font-size: 0.9rem;
+          }
+        }
+      }
+    }
+  }
+
+  .footer-links-bottom {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: center;
+    justify-content: space-around;
+    align-content: flex-end;
+
+    .link-bottom {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      list-style: none;
+      text-decoration: none;
+    }
+  }
+
+  .footer-bottom {
+    text-align: center;
+  }
+}
+
 // Responsive styles
 @media (max-width: 768px) {
   .container {
@@ -168,6 +518,85 @@
 
     .hero-img {
       margin-top: 2rem;
+    }
+  }
+
+  .reviews-container {
+    .card-container {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 0 0 2rem 0;
+    }
+  }
+
+  .faq-container {
+    margin: 2rem 0;
+    padding: 1rem 0;
+
+    h1 {
+      font-family: "Satoshi-Variable";
+      font-weight: 500;
+      font-size: 2rem;
+      text-align: left;
+      margin: 0;
+      padding: 2rem 0;
+    }
+
+    .faq {
+      margin: 0 50px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      .faq-item {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 90%;
+
+        background-color: #1a1a1a;
+        padding: 1rem;
+        margin: 1rem 0;
+        border: 1px solid #ffffff;
+
+        .faq-question {
+          display: flex;
+          flex-direction: row;
+          font-family: "Satoshi-Variable";
+          font-size: 1.2rem;
+          text-align: start;
+
+          h3 {
+            margin: 0;
+            font-weight: 400;
+          }
+
+          i {
+            margin-left: auto;
+            padding: 0.2rem;
+
+            &.active {
+              rotate: 180deg;
+            }
+          }
+        }
+
+        .faq-answer {
+          display: none;
+          p {
+            font-family: "Satoshi-Variable";
+            font-weight: 300;
+            font-size: 1rem;
+            text-align: start;
+            margin-top: 1rem;
+          }
+
+          &.active {
+            display: block;
+          }
+        }
+      }
     }
   }
 }
