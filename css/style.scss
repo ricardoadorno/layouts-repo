@@ -1,7 +1,7 @@
 @import url("satoshi.css");
 
 .container {
-  margin: 0 160px; /* Add 20px of margin to the left and right sides */
+  margin: 0 160px;
 }
 
 .navbar {
@@ -210,6 +210,145 @@
   }
 }
 
+.display {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+
+  .display-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    h1 {
+      font-family: "Satoshi-Variable";
+      font-weight: 500;
+      font-size: 2rem;
+      text-align: center;
+      margin: 0;
+    }
+    p {
+      font-family: "Satoshi-Variable";
+      font-weight: 400;
+      font-size: 1rem;
+      text-align: center;
+      margin: 0;
+      max-width: 500px;
+    }
+    a {
+      font-family: "Satoshi-Variable";
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 1rem;
+      text-align: center;
+      margin: 0;
+      padding-bottom: 3rem;
+      background-color: transparent;
+      color: #0a0f0d;
+      border-bottom: 1px solid #0a0f0d;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      position: relative;
+
+      i {
+        position: absolute;
+        right: -1rem;
+        top: 0.8rem;
+      }
+    }
+  }
+
+  .display-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 1rem 0.7rem;
+    grid-template-areas:
+      "item-1 item-2 item-2 item-2"
+      "item-1 item-3 item-3 item-3"
+      "item-4 item-4 item-5 item-5"
+      "item-4 item-4 item-5 item-5";
+
+    .display-grid-item {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      text-align: start;
+      gap: 1rem;
+      padding: 1.5rem;
+      border-radius: 10px;
+      border: 1px solid #0a0f0d;
+
+      h3 {
+        font-family: "Satoshi-Variable";
+        font-weight: 500;
+        font-size: 1.5rem;
+        text-align: start;
+        margin: 0;
+      }
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+
+        li::before {
+          content: "";
+          background-image: url(../icons/arrow-icon.svg);
+          width: 20px;
+          height: 20px;
+          display: inline-block;
+          margin-right: 10px;
+        }
+        li {
+          list-style-type: none;
+          font-family: "Satoshi-Variable";
+          font-weight: 400;
+          font-size: 1rem;
+          text-align: start;
+          margin: 0;
+        }
+      }
+    }
+
+    .item-1 {
+      grid-area: item-1;
+      background-color: #ebffdb;
+    }
+
+    .item-2 {
+      grid-area: item-2;
+      background-color: #fffba0;
+    }
+
+    .item-3 {
+      grid-area: item-3;
+      background-color: #c5b6f0;
+    }
+
+    .item-4 {
+      grid-area: item-4;
+      background-color: #d5e9f8;
+    }
+
+    .item-5 {
+      grid-area: item-5;
+      background-color: #fef4db;
+    }
+  }
+}
+
 .reviews-container {
   margin-top: 2rem;
   padding: 2rem 0;
@@ -310,6 +449,8 @@
 
 .faq-container {
   margin-bottom: 2rem 0;
+  padding-bottom: 3rem;
+
   background-color: #0a0f0d;
   color: #ffffff;
 
@@ -380,6 +521,7 @@
 }
 
 .footer {
+  margin: 0 160px;
   display: grid;
   gap: 3rem;
   grid-template-columns: 1fr 2fr;
@@ -518,6 +660,20 @@
 
     .hero-img {
       margin-top: 2rem;
+    }
+  }
+
+  .display {
+    .display-grid {
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+      gap: 2rem;
+      grid-template-areas:
+        "item-1"
+        "item-2"
+        "item-3"
+        "item-4"
+        "item-5";
     }
   }
 
