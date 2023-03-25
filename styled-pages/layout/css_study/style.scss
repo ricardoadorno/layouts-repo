@@ -1,0 +1,243 @@
+$box-shadow-default: 10px 15px 20px
+  rgba(
+    $color: #1d083f,
+    $alpha: 0.5,
+  );
+
+:root {
+  --background-color: #263238;
+  --primary-color: #28306a;
+  --accent-color: #f59e0b;
+  --white-color: #f8fafc;
+  --danger-color: #e53e3e;
+  --sucess-color: #319795;
+  --gray-color: #78909c;
+
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  line-height: 1.2;
+}
+
+@mixin scale {
+  transition: scale 0.3s ease-in-out;
+
+  &:hover {
+    scale: 1.03;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  max-width: 70%;
+  margin: 5rem auto;
+  gap: 2rem;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--white-color);
+  color: var(--background-color);
+  max-width: 70%;
+  height: 4rem;
+  margin: 2rem auto;
+  border-radius: 2rem;
+  box-shadow: 10px 5px 20px rgba($color: #1d083f, $alpha: 0.3);
+
+  .nav-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    .nav-links {
+      margin: 0;
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+
+      .nav-link {
+        cursor: pointer;
+        font-weight: 700;
+        font-size: 1rem;
+        @include scale;
+      }
+    }
+
+    .nav-search {
+      display: flex;
+      align-items: stretch;
+      gap: 1rem;
+      height: 1.5rem;
+
+      .nav-input {
+        background-color: var(--gray-color);
+        border: none;
+        border-radius: 1rem;
+        outline: none;
+        text-indent: 1rem;
+        flex: 0 0 auto;
+        box-shadow: 5px 5px 10px rgba($color: #1d083f, $alpha: 0.2);
+      }
+
+      .nav-search-button {
+        cursor: pointer;
+        background-color: var(--primary-color);
+        color: var(--white-color);
+        border: none;
+        border-radius: 1rem;
+        outline: none;
+        padding: 0.2rem 1rem;
+        box-shadow: 5px 5px 10px rgba($color: #1d083f, $alpha: 0.2);
+        @include scale;
+      }
+    }
+  }
+}
+
+.aside-column {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  flex: 1;
+  gap: 0.3rem;
+
+  .card-list {
+    .article-card {
+      img {
+        box-shadow: $box-shadow-default;
+      }
+      margin-top: 0.8rem;
+      padding: 0.8rem 0;
+      border-bottom: 2px solid var(--white-color);
+
+      &:last-child {
+        border: none;
+      }
+    }
+  }
+}
+
+.article-column {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
+  gap: 1rem;
+  flex: 2;
+
+  .main-article {
+    $gap: 0.5rem;
+    $title-pad: 1.5rem;
+
+    background-color: var(--white-color);
+    color: var(--background-color);
+    border-radius: 0.5rem;
+    box-shadow: $box-shadow-default;
+
+    img {
+      border-radius: 0.5rem;
+    }
+
+    .article-content {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: $gap;
+
+      .article-date {
+        color: var(--primary-color);
+        padding-left: calc($gap + $title-pad);
+        font-weight: 700;
+        text-align: center;
+
+        .number {
+          font-size: 1.5rem;
+        }
+      }
+
+      .article-title {
+        display: flex;
+        flex-direction: column;
+        padding: $title-pad;
+
+        a {
+          margin: 0.3rem 0;
+          text-transform: uppercase;
+          font-size: 1.3rem;
+          font-weight: 600;
+          max-width: 80%;
+          text-decoration: none;
+          color: var(--background-color);
+        }
+
+        small {
+          color: var(--gray-color);
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}
+
+// * Ultilities
+
+.btn {
+  width: 100%;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  background-color: var(--white-color);
+  color: var(--background-color);
+  border: none;
+  font-weight: 600;
+  border-radius: 0.3rem;
+  cursor: pointer;
+
+  box-shadow: $box-shadow-default;
+  @include scale;
+}
+
+.btn-decorated {
+  background-image: url(login.jpg);
+  color: var(--white-color);
+}
+
+.btn-categories {
+  background-image: url(categories.jpg);
+  color: var(--white-color);
+  text-align: start;
+  text-indent: 1rem;
+  font-size: 1.3rem;
+  padding: 1.5rem;
+}
+
+h3 {
+  margin: 0.3rem 0;
+  font-weight: 500;
+  font-size: 1rem;
+  max-width: 60%;
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: "768px") {
+  .container {
+    flex-direction: column;
+    max-width: 75%;
+  }
+
+  .aside-column {
+    width: 100%;
+  }
+
+  .card-list {
+    display: none;
+  }
+}

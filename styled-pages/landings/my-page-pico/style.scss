@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --primary-color: #5c62ec;
+  --secondary-color: #2232af;
+  --tertiary-color: #1aabdc;
+  --quaternary-color: #5bc5ed;
+
+  --white-color: #ffffff;
+}
+
+/* Nav & Hero */
+
+.nav-links {
+  border-radius: 0%;
+}
+
+.nav-links:hover {
+  box-shadow: 0 3px 0 var(--primary-color);
+}
+
+.hero-section {
+  max-width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+/* Projects */
+.project-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Skills */
+.skill-card {
+  padding: 1em;
+  margin: 1rem 0;
+}
+
+.skill-card i {
+  font-size: 2.5rem;
+  padding: 1rem 0;
+}
+
+/* Footer */
+
+.footer {
+  border-top: 1px solid #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 1rem;
+}
+
+.footer-links-title {
+  color: var(--quaternary-color);
+  margin-bottom: 1rem;
+}
+
+.footer-links {
+  padding: 0;
+}
+
+.footer-links > li {
+  list-style: none;
+  cursor: pointer;
+}
+
+.footer-links > li:hover {
+  color: var(--quaternary-color);
+}
+
+.socials-link {
+  color: var(--white-color);
+  font-size: 2rem;
+  padding: 0.3rem;
+  cursor: pointer;
+}
+
+.socials-link:hover {
+  color: var(--quaternary-color);
+}
+
+/* Utilities */
+.btn {
+  border-radius: 0%;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+  border-radius: 5px;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  border: none;
+}
+
+.btn-transparent {
+  background-color: transparent;
+  border: 1px solid var(--white-color);
+  color: var(--white-color);
+}
+
+.btn-accent {
+  background-color: var(--tertiary-color);
+  color: var(--white-color);
+}
+
+.btn-small {
+  max-width: 50%;
+}
+
+.primary-text {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.secondary-text {
+  font-size: 0.5rem;
+  font-weight: 400;
+}
+
+.section-title {
+  text-align: center;
+}
+
+.text-title {
+  color: var(--white-color);
+  font-weight: 600;
+  padding: 1rem 0;
+}
+
+.photo {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+/* Responsiveness */
+@media screen and (max-width: 768px) {
+  .footer {
+    text-align: center;
+  }
+
+  .footer .brand {
+    padding: 1rem 1rem;
+  }
+}
